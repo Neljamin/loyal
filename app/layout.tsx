@@ -7,9 +7,10 @@ import { NavMenu } from "./components/NavMenu";
 import { SignInScreen } from "./components/SignInScreen";
 import { UnauthorizedUser } from "./components/UnauthorizedUser";
 
+// TODO move to contentful? or somewhere else where we can manage it
+const authorizedUsers = JSON.parse(process.env.AUTHORIZED_EMAILS || "[]");
 const inter = Inter({ subsets: ["latin"] });
-// TODO move somewhere else
-const authorizedUsers = ["aodhaganmurphy@gmail.com"];
+
 const isAuthorized = (email?: string | null) =>
   email && authorizedUsers.includes(email);
 
