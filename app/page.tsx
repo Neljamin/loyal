@@ -15,9 +15,5 @@ export default async function Home() {
     .then((entry) => entry)
     .catch((err) => console.log(err));
 
-  return (
-    <main className="h-screen flex flex-col">
-      <LoyaltyCards loyaltyCards={loyaltyCards} />
-    </main>
-  );
+  return <LoyaltyCards loyaltyCards={loyaltyCards} />;
 }
